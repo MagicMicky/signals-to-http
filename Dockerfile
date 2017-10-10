@@ -6,6 +6,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o app .
 
 FROM scratch
 WORKDIR /app
-COPY --from=0 /src/app/app /app/
+COPY --from=0 /src/app /app/
 ENTRYPOINT ["./app"]
 
